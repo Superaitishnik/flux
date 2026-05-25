@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flux — Веб-сайты для бизнеса</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="logo-text">FLUX</span>
+      <span class="logo-dot"></span>
+    </div>
+    <div class="nav-links">
+      <a href="#about" class="nav-link">О нас</a>
+      <a href="#services" class="nav-link">Услуги</a>
+      <a href="#works" class="nav-link">Работы</a>
+      <a href="#contact" class="nav-link">Контакт</a>
+    </div>
+    <a href="https://wa.me/87750027660" target="_blank" class="nav-cta">
+      Написать <span class="arrow">↗</span>
+    </a>
+    <button class="burger" id="burger">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mob-link">О нас</a>
+    <a href="#services" class="mob-link">Услуги</a>
+    <a href="#works" class="mob-link">Работы</a>
+    <a href="#contact" class="mob-link">Контакт</a>
+    <a href="https://wa.me/87750027660" target="_blank" class="mob-cta">Написать в WhatsApp ↗</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-lines"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span> Доступно для новых проектов
+      </div>
+      <h1 class="hero-title reveal">
+        <span class="line">Сайты,</span>
+        <span class="line gradient-text">которые</span>
+        <span class="line">продают.</span>
+      </h1>
+      <p class="hero-sub reveal">
+        Мы создаём профессиональные лендинги и бизнес-сайты,<br>
+        которые привлекают клиентов и выделяют вас среди конкурентов.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="https://wa.me/87750027660" target="_blank" class="btn-primary">
+          Начать проект <span class="btn-arrow">→</span>
+        </a>
+        <a href="#works" class="btn-secondary">
+          Посмотреть работы
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num" data-target="30">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Проектов</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span>
+          <span class="stat-label">Довольных клиентов</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="3">0</span><span class="stat-plus">x</span>
+          <span class="stat-label">Рост заявок</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Скролл</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Рестораны</span><span class="sep">✦</span>
+      <span>Отели</span><span class="sep">✦</span>
+      <span>Салоны красоты</span><span class="sep">✦</span>
+      <span>Магазины</span><span class="sep">✦</span>
+      <span>Клиники</span><span class="sep">✦</span>
+      <span>Фитнес</span><span class="sep">✦</span>
+      <span>Туризм</span><span class="sep">✦</span>
+      <span>Автосервисы</span><span class="sep">✦</span>
+      <span>Рестораны</span><span class="sep">✦</span>
+      <span>Отели</span><span class="sep">✦</span>
+      <span>Салоны красоты</span><span class="sep">✦</span>
+      <span>Магазины</span><span class="sep">✦</span>
+      <span>Клиники</span><span class="sep">✦</span>
+      <span>Фитнес</span><span class="sep">✦</span>
+      <span>Туризм</span><span class="sep">✦</span>
+      <span>Автосервисы</span><span class="sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left reveal-left">
+          <div class="section-tag">О компании</div>
+          <h2 class="section-title">Мы делаем бизнес<br><em>видимым онлайн</em></h2>
+          <p class="about-text">
+            Flux — это команда дизайнеров и разработчиков, которые создают сайты для малого бизнеса. Мы не делаем сложные корпоративные платформы — мы сосредоточены на том, чтобы ваш бизнес выглядел профессионально и получал реальные заявки.
+          </p>
+          <p class="about-text">
+            Каждый сайт — это уникальный продукт, созданный с нуля под ваш бренд и ваших клиентов.
+          </p>
+          <div class="about-features">
+            <div class="feature">
+              <div class="feature-icon">⚡</div>
+              <div>
+                <strong>Быстро</strong>
+                <p>Сайт готов за 5–10 дней</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🎯</div>
+              <div>
+                <strong>Под вас</strong>
+                <p>Индивидуальный дизайн</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">📱</div>
+              <div>
+                <strong>Мобильный</strong>
+                <p>Идеален на любом устройстве</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-right reveal-right">
+          <div class="about-card-wrap">
+            <div class="about-card card-1">
+              <div class="card-label">Дизайн</div>
+              <div class="card-value">Уникальный</div>
+            </div>
+            <div class="about-card card-2">
+              <div class="card-label">Срок</div>
+              <div class="card-value">5–10 дней</div>
+            </div>
+            <div class="about-card card-3">
+              <div class="card-label">Поддержка</div>
+              <div class="card-value">24/7</div>
+            </div>
+            <div class="about-card card-4">
+              <div class="card-label">Результат</div>
+              <div class="card-value">Больше заявок</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-tag">Услуги</div>
+        <h2 class="section-title">Что мы делаем</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-num">01</div>
+          <div class="service-icon">🖥</div>
+          <h3>Лендинг-страница</h3>
+          <p>Одностраничный сайт с чётким описанием услуг, призывом к действию и формой заявки. Идеально для быстрого старта.</p>
+          <div class="service-tag">от 20 000 ₸</div>
+        </div>
+        <div class="service-card reveal" data-delay="100">
+          <div class="service-num">02</div>
+          <div class="service-icon">🏪</div>
+          <h3>Сайт-визитка</h3>
+          <p>Многостраничный сайт для вашего бизнеса: о компании, услуги, портфолио, контакты. Полноценное онлайн-присутствие.</p>
+          <div class="service-tag">от 50 000 ₸</div>
+        </div>
+        <div class="service-card reveal" data-delay="200">
+          <div class="service-num">03</div>
+          <div class="service-icon">🛍</div>
+          <h3>Каталог товаров</h3>
+          <p>Простой сайт с каталогом ваших товаров или меню для ресторанов, магазинов и сервисов.</p>
+          <div class="service-tag">от 50 000 ₸</div>
+        </div>
+        <div class="service-card reveal" data-delay="300">
+          <div class="service-num">04</div>
+          <div class="service-icon">🔄</div>
+          <h3>Редизайн сайта</h3>
+          <p>Обновим ваш устаревший сайт до современного вида. Ускорим загрузку, улучшим дизайн, адаптируем под мобильные.</p>
+          <div class="service-tag">от 60 000 ₸</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section class="works section" id="works">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-tag">Портфолио</div>
+        <h2 class="section-title">Наши работы</h2>
+        <p class="section-sub">Живые сайты, которые работают прямо сейчас</p>
+      </div>
+
+      <div class="works-featured reveal">
+        <div class="work-label">
+          <span class="work-num">01</span>
+          <div class="work-info">
+            <h3>Nomad Luxe</h3>
+            <p>Отель в Жаркенте — лендинг с бронированием</p>
+            <div class="work-tags">
+              <span>Отель</span>
+              <span>Лендинг</span>
+              <span>Казахстан</span>
+            </div>
+            <a href="https://nomadluxe.vercel.app/" target="_blank" class="work-link">
+              Открыть сайт ↗
+            </a>
+          </div>
+        </div>
+        <div class="work-preview-wrap">
+          <div class="browser-chrome">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="browser-url">nomadluxe.vercel.app</div>
+              <div class="browser-actions">
+                <span>⟳</span>
+              </div>
+            </div>
+            <div class="iframe-container">
+              <iframe
+                src="https://nomadluxe.vercel.app/"
+                title="Nomad Luxe Hotel"
+                loading="lazy"
+                scrolling="yes"
+              ></iframe>
+              <div class="iframe-overlay" onclick="this.style.display='none'">
+                <div class="iframe-play">
+                  <span>🖱 Нажмите для взаимодействия</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="preview-glow"></div>
+        </div>
+      </div>
+
+      <!-- More works placeholder -->
+      <div class="works-more reveal">
+        <div class="work-card-mini">
+          <div class="work-mini-inner">
+            <div class="work-mini-icon">🍽</div>
+            <h4>Ресторан «Восток»</h4>
+            <p>Меню и бронирование столиков</p>
+            <span class="work-mini-tag">В разработке</span>
+          </div>
+        </div>
+        <div class="work-card-mini">
+          <div class="work-mini-inner">
+            <div class="work-mini-icon">💆</div>
+            <h4>Beauty Studio</h4>
+            <p>Сайт салона красоты</p>
+            <span class="work-mini-tag">Скоро</span>
+          </div>
+        </div>
+        <div class="work-card-mini add-project" id="addProject">
+          <div class="work-mini-inner">
+            <div class="work-mini-icon">+</div>
+            <h4>Ваш проект</h4>
+            <p>Станьте следующим в нашем портфолио</p>
+            <a href="https://wa.me/87750027660" target="_blank" class="work-mini-tag cta">Обсудить →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-tag">Процесс</div>
+        <h2 class="section-title">Как мы работаем</h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal" data-delay="0">
+          <div class="step-circle">
+            <span>1</span>
+            <div class="step-ring"></div>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-content">
+            <h3>Консультация</h3>
+            <p>Обсуждаем ваш бизнес, цели и пожелания. Бесплатно, без обязательств.</p>
+          </div>
+        </div>
+        <div class="process-step reveal" data-delay="150">
+          <div class="step-circle">
+            <span>2</span>
+            <div class="step-ring"></div>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-content">
+            <h3>Дизайн</h3>
+            <p>Создаём уникальный дизайн специально для вашего бренда.</p>
+          </div>
+        </div>
+        <div class="process-step reveal" data-delay="300">
+          <div class="step-circle">
+            <span>3</span>
+            <div class="step-ring"></div>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-content">
+            <h3>Разработка</h3>
+            <p>Верстаем быстрый, адаптивный сайт и размещаем его в интернете.</p>
+          </div>
+        </div>
+        <div class="process-step reveal" data-delay="450">
+          <div class="step-circle">
+            <span>4</span>
+            <div class="step-ring"></div>
+          </div>
+          <div class="step-content">
+            <h3>Запуск</h3>
+            <p>Сдаём готовый сайт и обучаем вас управлению контентом.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band reveal">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <h2>Готовы начать?</h2>
+        <p>Напишите нам — ответим в течение часа</p>
+      </div>
+      <a href="https://wa.me/87750027660" target="_blank" class="btn-primary large">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.735 5.47 2.022 7.768L0 32l8.43-2.209A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.77-1.849l-.486-.289-5.006 1.312 1.337-4.87-.318-.5A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.274-9.884c-.398-.2-2.355-1.162-2.72-1.294-.366-.133-.632-.2-.898.2-.265.398-1.03 1.294-1.263 1.56-.232.265-.465.298-.863.1-.398-.2-1.68-.619-3.2-1.975-1.183-1.055-1.981-2.357-2.214-2.754-.232-.398-.025-.613.175-.812.18-.179.398-.465.597-.697.2-.232.265-.398.398-.664.133-.265.066-.497-.033-.697-.1-.2-.898-2.164-1.23-2.963-.325-.78-.655-.675-.898-.687l-.765-.013c-.265 0-.697.1-1.063.497-.365.398-1.395 1.362-1.395 3.325s1.428 3.857 1.627 4.123c.2.265 2.81 4.29 6.808 6.016.952.411 1.695.657 2.273.841.955.304 1.825.261 2.512.158.766-.114 2.355-.963 2.688-1.893.332-.93.332-1.727.232-1.893-.1-.165-.365-.265-.763-.465z"/></svg>
+        Написать в WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">FLUX<span class="logo-dot"></span></div>
+          <p>Профессиональные сайты<br>для вашего бизнеса</p>
+          <div class="footer-social">
+            <a href="https://wa.me/87750027660" target="_blank" class="social-btn whatsapp">
+              <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.735 5.47 2.022 7.768L0 32l8.43-2.209A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.77-1.849l-.486-.289-5.006 1.312 1.337-4.87-.318-.5A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.274-9.884c-.398-.2-2.355-1.162-2.72-1.294-.366-.133-.632-.2-.898.2-.265.398-1.03 1.294-1.263 1.56-.232.265-.465.298-.863.1-.398-.2-1.68-.619-3.2-1.975-1.183-1.055-1.981-2.357-2.214-2.754-.232-.398-.025-.613.175-.812.18-.179.398-.465.597-.697.2-.232.265-.398.398-.664.133-.265.066-.497-.033-.697-.1-.2-.898-2.164-1.23-2.963-.325-.78-.655-.675-.898-.687l-.765-.013c-.265 0-.697.1-1.063.497-.365.398-1.395 1.362-1.395 3.325s1.428 3.857 1.627 4.123c.2.265 2.81 4.29 6.808 6.016.952.411 1.695.657 2.273.841.955.304 1.825.261 2.512.158.766-.114 2.355-.963 2.688-1.893.332-.93.332-1.727.232-1.893-.1-.165-.365-.265-.763-.465z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <a href="#services">Лендинг-страница</a>
+          <a href="#services">Сайт-визитка</a>
+          <a href="#services">Каталог товаров</a>
+          <a href="#services">Редизайн</a>
+        </div>
+        <div class="footer-col">
+          <h4>Компания</h4>
+          <a href="#about">О нас</a>
+          <a href="#works">Портфолио</a>
+          <a href="#contact">Контакты</a>
+        </div>
+        <div class="footer-col">
+          <h4>Контакты</h4>
+          <a href="https://wa.me/87750027660" target="_blank">+7 775 002 7660</a>
+          <a href="https://wa.me/87750027660" target="_blank">WhatsApp</a>
+          <p class="footer-location">📍 Казахстан</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Flux. Все права защищены.</p>
+        <p class="footer-made">Сделано с ❤ командой Flux</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
